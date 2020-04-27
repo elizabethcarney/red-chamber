@@ -1,12 +1,13 @@
+var all_modal = document.getElementsByClassName("info_modal");
+var exit_btn = document.getElementsByClassName("exit")[0];
 
-/*
-<script type="text/javascript">
-    $("document").ready(function(){
+var naiad_modal = document.getElementById("naiad_info_modal");
+var naiad_btn = document.getElementById("naiad_map_icon");
 
-      $('.svgload').on('click', function() {
-          alert('clicked svg new');
-      }).svg({loadURL: '/img/new.svg'});
+exit_btn.onclick = function() {
+  all_modal.style.display = "none";
+}
 
-    });
-</script>
-*/
+naiad_btn.onclick = function() {
+  naiad_modal.style.display = "block";
+}

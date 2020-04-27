@@ -10,28 +10,85 @@
 
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Enriqueta:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/jquery.svg.css"> 
-  <script type="text/javascript" src="js/jquery.svg.js"></script>
-  <script src="js/script.js"></script>
-  <script type="text/javascript">
-    $("document").ready(function(){
-
-      $('.svgload').on('click', function() {
-          alert('clicked svg');
-      }).svg({loadURL: '/img/new.svg'});
-
-    });
-  </script>
+  <!--<script src="js/script.js"></script>-->
 </head>
 
 <body>
+  <div id="header">
+    <div class="nav_menu">
+      <img src="img/nav_icon.png" id="nav_icon"></img>
+      <div class="nav_contents">
+        <a href="#intro">Map</a>
+        <a href="#about">About</a>
+        <a href="#goals">Project Goals</a>
+        <a href="#other_proj">Preexisting Projects</a>
+        <a href="#refs">References</a>
+      </div>
+    </div>
+    <div id="header_title">
+      <h1>A Map of Prospect Garden</h1><br>
+      <h3>EXPLORING PARADISE IN DREAM OF THE RED CHAMBER</h3><br>
+      <h4>By Elizabeth Carney</h4>
+    </div>
+  </div>
 
-  <p>Hello, world!</p>
+  <div id="main">
+    <div id="intro" class="text_section">
+      <br><p>Explore the symbolism of Prospect Garden (大观园) by clicking on different places in the map below.</p>
+    </div>
+    <div id="map_container">
+      <div class="map">
+        <div class="info_modal" id="naiad_info_modal">
+          <span class="exit">x</span>
+          <p>analysis</p>
+        </div>
+        <div class="map_icons_div">
+          <img src="img/temp_map_icon.jpg" class="map_icon" id="naiad_map_icon">
+        </div>
+        <img src="img/background.jpg" class="background_map">
+      </div>
+    </div>
+    <div id="about" class="text_section">
+      <h3>About</h3>
+      <p>about</p>
+    </div>
+    <div id="goals" class="text_section">
+      <h3>Project Goals</h3>
+      <p>goals</p>
+    </div>
+    <div id="other_proj" class="text_section">
+      <h3>Preexisting Projects</h3>
+      <p>other_proj</p>
+    </div>
+    <div id="refs" class="text_section">
+      <h3>References</h3>
+      <p>refs</p>
+    </div>
+  </div>
 
-  <div class="svgload" style="width: 70px; height: 70px; background-color: blue;"></div>
+  <div id="footer" class="text_section">
+    <pre><a href="mailto:ekcarney@smith.edu">ekcarney@smith.edu</a>    •    <a href="https://github.com/elizabethcarney">Github</a>    •    <a href="https://www.linkedin.com/in/elizabeth-kim-carney/">LinkedIn</a></pre>
+  </div>
 
 </body>
+
+<script type="text/javascript">
+  $("document").ready(function(){
+    var naiad_exit = document.getElementsByClassName("exit")[0];
+    var naiad_modal = document.getElementById("naiad_info_modal");
+    var naiad_icon = document.getElementById("naiad_map_icon");
+
+    naiad_exit.onclick = function() {
+      naiad_modal.style.display = "none";
+    }
+
+    naiad_icon.onclick = function() {
+      naiad_modal.style.display = "block";
+    }
+
+  });
+</script>
 
 </html>
