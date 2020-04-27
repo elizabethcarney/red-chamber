@@ -1,4 +1,4 @@
-# red-chamber
+# elizabethcarney.github.io/red-chamber
 
 ---
 permalink: /index.html
