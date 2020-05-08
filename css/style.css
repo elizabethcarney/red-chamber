@@ -35,7 +35,7 @@ a, h1, h2, h3, h4, h5, h6 {
 #main {
     width: 100%;
     min-height: calc(100vh - 175px - 120px); /* entire page at least as long as viewport height */
-    background-color: #f8f8ff;
+    background-color: #f8f0e4;
 }
 
 #footer {
@@ -44,7 +44,7 @@ a, h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     padding: 0px;
     padding-top: 20px;
-    background-image: linear-gradient(#f8f8ff, lightyellow);
+    background-image: linear-gradient(#f8f0e4, lightyellow);
     text-align: center;
 }
 
@@ -68,7 +68,7 @@ a, h1, h2, h3, h4, h5, h6 {
     display: none;
     position: absolute;
     min-width: 160px;
-    background-color: #f8f8ff;
+    background-color: #f8f0e4;
     padding: 10px;
     margin-left: 20px;
     line-height: 150%;
@@ -137,18 +137,43 @@ a, h1, h2, h3, h4, h5, h6 {
     overflow: scroll;
     z-index: 5;
     text-align: center;
-    background-color: #f8f8ff;
+    background-color: #f8f0e4;
 }
 
 .modal_header {
     max-width: 800px;
     max-height: 400px;
-    width: 100%;
+    width: 70%;
     position: relative;
+}
+
+.modal_content {
+    padding-top: 20px;
+    text-align: left;
+    font-family: 'Enriqueta', serif;
 }
 
 .modal_video {
     width: 100%;
+}
+
+.fullsize {
+    width: 100%;
+}
+
+.portrait {
+    width: 100%;
+}
+
+.captioned {
+    box-sizing: border-box;
+    text-align: center;
+    font-size: .7em;
+}
+.captioned img {
+    margin-bottom: 10px;
+    display: block;
+    border: 1px solid black;
 }
 
 .exit {
@@ -184,7 +209,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 #intro {
     text-align: center;
-    background-image: linear-gradient(darkgreen, lightyellow, #f8f8ff 25%);
+    background-image: linear-gradient(darkgreen, lightyellow, #f8f0e4 25%);
 }
 
 /*
