@@ -12,7 +12,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Enriqueta:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!--<script src="js/script.js"></script>-->
+
 </head>
 
 <body>
@@ -29,27 +29,97 @@
     </div>
     <div id="header_title">
       <h1>A Map of Prospect Garden</h1><br>
-      <h3>EXPLORING PARADISE IN DREAM OF THE RED CHAMBER</h3><br>
+      <h3>EXPLORING PARADISE IN DREAM OF THE RED CHAMBER (红&#8288;楼&#8288;梦）</h3><br>
       <h4>By Elizabeth Carney</h4>
     </div>
   </div>
 
   <div id="main">
     <div id="intro" class="text_section">
-      <br><p>Explore the symbolism of Prospect Garden (大观园) by clicking on different places in the map below.</p>
+      <br><p>Explore the symbolism of Prospect Garden（大&#8288;观&#8288;园）by clicking on different places in the map below.</p>
     </div>
     <div id="map_container">
       <div class="map">
-        <div class="info_modal" id="naiad_info_modal">
-          <span class="exit">x</span>
-          <p>analysis</p>
+
+        <div class="info_modal" id="gate_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="gate_exit">
+          <img src="img/gate_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
         </div>
+
+        <div class="info_modal" id="drenched_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="drenched_exit">
+          <img src="img/drenched_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
+        <div class="info_modal" id="naiad_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="naiad_exit">
+          <img src="img/naiad_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+            <iframe class="modal_video" width="560" height="315" src="https://www.youtube.com/embed/h3lCXpYn_TQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="info_modal" id="sweetrice_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="sweetrice_exit">
+          <img src="img/sweetrice_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
+        <div class="info_modal" id="allspice_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="allspice_exit">
+          <img src="img/allspice_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
+        <div class="info_modal" id="prospect_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="prospect_exit">
+          <img src="img/prospect_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
+        <div class="info_modal" id="delights_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="delights_exit">
+          <img src="img/delights_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
+        <div class="info_modal" id="death_modal">
+          <img src="img/favicon-32x32.png" class="exit" id="death_exit">
+          <img src="img/death_header.png" class="modal_header">
+          <div class="modal_content">
+            <p>analysis</p>
+          </div>
+        </div>
+
         <div class="map_icons_div">
-          <img src="img/temp_map_icon.jpg" class="map_icon" id="naiad_map_icon">
+          <img src="img/gate_icon.png" class="map_icon" id="gate_icon">
+          <img src="img/drenched_icon.png" class="map_icon" id="drenched_icon">
+          <img src="img/naiad_icon.png" class="map_icon" id="naiad_icon">
+          <img src="img/sweetrice_icon.png" class="map_icon" id="sweetrice_icon">
+          <img src="img/allspice_icon.png" class="map_icon" id="allspice_icon">
+          <img src="img/prospect_icon.png" class="map_icon" id="prospect_icon">
+          <img src="img/delights_icon.png" class="map_icon" id="delights_icon">
+          <img src="img/death_icon.png" class="map_icon" id="death_icon">
         </div>
         <img src="img/background.jpg" class="background_map">
       </div>
     </div>
+
     <div id="about" class="text_section">
       <h3>About</h3>
       <p>about</p>
@@ -75,18 +145,28 @@
 </body>
 
 <script type="text/javascript">
+
   $("document").ready(function(){
-    var naiad_exit = document.getElementsByClassName("exit")[0];
-    var naiad_modal = document.getElementById("naiad_info_modal");
-    var naiad_icon = document.getElementById("naiad_map_icon");
 
-    naiad_exit.onclick = function() {
-      naiad_modal.style.display = "none";
-    }
+    /* info modals are found based on consistent id naming patterns */
 
-    naiad_icon.onclick = function() {
-      naiad_modal.style.display = "block";
-    }
+    /* when map icon is clicked, display info modal */
+    $('img.map_icon').click(function(event) {
+      var identifier = event.target.id
+      prefix = identifier.substring(0, identifier.length-5);
+      
+      var this_modal = document.getElementById(prefix.concat("_modal"));
+      this_modal.style.display = "block";
+    });
+
+    /* when exit button is clicked, close info modal */
+    $('img.exit').click(function(event) {
+      var identifier = event.target.id
+      prefix = identifier.substring(0, identifier.length-5);
+      
+      var this_modal = document.getElementById(prefix.concat("_modal"));
+      this_modal.style.display = "none";
+    });
 
   });
 </script>

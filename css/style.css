@@ -35,7 +35,7 @@ a, h1, h2, h3, h4, h5, h6 {
 #main {
     width: 100%;
     min-height: calc(100vh - 175px - 120px); /* entire page at least as long as viewport height */
-    background-color: lightyellow;
+    background-color: #f8f8ff;
 }
 
 #footer {
@@ -44,7 +44,7 @@ a, h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     padding: 0px;
     padding-top: 20px;
-    background-color: pink;
+    background-image: linear-gradient(#f8f8ff, lightyellow);
     text-align: center;
 }
 
@@ -67,8 +67,8 @@ a, h1, h2, h3, h4, h5, h6 {
 .nav_contents {
     display: none;
     position: absolute;
-    min-width: 150px;
-    background-color: white;
+    min-width: 160px;
+    background-color: #f8f8ff;
     padding: 10px;
     margin-left: 20px;
     line-height: 150%;
@@ -77,10 +77,12 @@ a, h1, h2, h3, h4, h5, h6 {
 }
 .nav_contents a:hover {
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 .nav_contents a {
     text-decoration: none;
+    color: darkred;
     display: block;
 }
 
@@ -88,20 +90,19 @@ a, h1, h2, h3, h4, h5, h6 {
     min-width: 500px;
     max-width: 1720px;
     width: calc(100vw - 200px);
-    min-height: 400px;
-    max-height: 880px;
-    height: calc(100vh - 100px);
+    min-height: 300px;
+    max-height: 980px;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     position: relative;
-    overflow: hidden;
     border: 5px solid darkred;
     z-index: 0;
 }
 
 .background_map {
-    height: 1080px;
-    width: 1920px;
+    width: 100%;
+    display: block;
+    min-height: 300px;
     z-index: 1;
 }
 
@@ -113,33 +114,49 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .map_icon {
     position: absolute;
-    top: 65%;
-    left: 35%;
-    width: 8%;
+    width: 15%;
     z-index: 2;
 }
 .map_icon:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .info_modal {
+    box-sizing: border-box;
     display: none;
     position: absolute;
-    width: 60%;
-    height: 80%;
-    left: 17%;
-    top: 6%;
-    padding: 20px;
-    background-color: pink;
-    border: 1px solid black;
+    max-width: 1376;
+    width: 80%;
+    height: 86%;
+    left: 10%;
+    top: 7%;
+    border: 3px solid darkred;
+    padding: 20px 30px;
     border-radius: 7px;
     overflow: scroll;
     z-index: 5;
+    text-align: center;
+    background-color: #f8f8ff;
+}
+
+.modal_header {
+    max-width: 800px;
+    max-height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.modal_video {
+    width: 100%;
 }
 
 .exit {
+    position: absolute;
     float: right;
+    width: 3%;
+    top: 5px;
+    right: 5px;
 }
 .exit:hover {
     cursor: pointer;
@@ -156,7 +173,7 @@ a, h1, h2, h3, h4, h5, h6 {
 #nav_icon {
     margin-top: 20px;
     margin-left: 20px;
-    height: 40px;
+    height: 30px;
 }
 
 #header_title {
@@ -167,5 +184,42 @@ a, h1, h2, h3, h4, h5, h6 {
 
 #intro {
     text-align: center;
-    background-image: linear-gradient(darkgreen, lightyellow 25%);
+    background-image: linear-gradient(darkgreen, lightyellow, #f8f8ff 25%);
+}
+
+/*
+ * Map Icon Positions
+ */
+
+#gate_icon {
+    top: 70%;
+    left: 55%;
+}
+#drenched_icon {
+    top: 67%;
+    left: 15%;
+}
+#naiad_icon {
+    top: 40%;
+    left: 40%;
+}
+#sweetrice_icon {
+    top: 30%;
+    left: 5%;
+}
+#allspice_icon {
+    top: 5%;
+    left: 30%;
+}
+#prospect_icon {
+    top: 10%;
+    left: 58%;
+}
+#delights_icon {
+    top: 55%;
+    left: 75%;
+}
+#death_icon {
+    top: 3%;
+    left: 82%;
 }
