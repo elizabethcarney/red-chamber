@@ -14,7 +14,7 @@ body {
     width: 100vw;
 }
 
-p {
+p, li {
     font-family: 'Enriqueta', serif;
 }
 
@@ -189,6 +189,10 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .text_section {
     padding: 20px 50px;
+    line-height: 1.3;
+}
+.text_section h3 {
+    color: darkred;
 }
 
 /*
@@ -197,7 +201,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 #nav_icon {
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 10px;
     height: 30px;
 }
 
