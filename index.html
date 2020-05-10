@@ -207,10 +207,42 @@
           <img src="img/favicon-exit-32x32.png" class="exit" id="allspice_exit"/>
           <img src="img/allspice_header.png" class="modal_header"/>
           <div class="modal_content">
-            <p></p>
+            <div class="captioned">
+              <img src="img/allspice_2.jpg" class="fullsize"/>
+              <p>Painted by 孙温 (Sun Wen) in the late 19th century, this illustration probably depicts a courtyard much like the one in All-Spice Court. The construction of the wooden window lattices and balustrades is impeccable. 
+                Note the tree and rock formations, as well, which lend a beautiful fragility to the landscaping (<a href="https://commons.wikimedia.org/wiki/File:Sun_Wen_Red_Chamber_7.jpg">source</a>). </p>
+            </div>
+            <div class="captioned" style="float:right; width:30%; padding-left:20px;">
+              <img src="img/allspice_3.jpeg" class="portrait"/>
+              <p>According to the Metropolitan Museum of Art, “strangely faceted rocks—thought of as miniature mountains—have been treasured by collectors since the Tang dynasty (618–907).” 
+                This painting by Lan Ying shows the rock’s holes and weathered surface, which make it seem artfully fragile. (<a href="https://www.metmuseum.org/art/collection/search/39713">source</a>).</p>
+            </div>
+            <br><h3>Balance in Traditional Gardens</h3><br>
+            <p>All-Spice Court is bursting with sweet-smelling herbs and flowers. Instead of trees and grasses, the courtyard has a rocky terrain where mosses grow on the stone. 
+              Wild figs, billowing wisteria, pollia berries, fragile orchids, herbaceous rue, and spicy ginger are a few of the plants that can be found here (in fact, 衡芜 means “ginger plant”). 
+              Elegant balustrades and latticed windows line its sides. The couplet written for the Court is: “Composing amidst cardamoms, you shall make verses like flowers. / Slumbering amidst the roses, you shall dream fragrant dreams.” 
+              This courtyard displays several elements of traditional Chinese garden design, most notably balance. For example, the soft herbs and mosses grow on hard, sharp rocks. 
+              Sculptural rocks riddled with holes have also been a popular feature for centuries, since they have a beautiful fragility and help create different levels of perspective 
+              (<a href="https://www.metmuseum.org/toah/hd/cgrk/hd_cgrk.htm">source</a>).</p>
+            <br><p>Xue Baochai lives here. She is very kind to others, but in a calculating way; she knows exactly how to play the social scene to get ahead. She is a capable manager, too. 
+              Baochai is often described as cold, which makes sense since her surname sounds like the word for snow in Chinese. Her upbringing, refined personality, 
+              and pragmatism make her an excellent candidate for Baoyu’s wife in the eyes of the Jia family. Although the sweet smells in the courtyard might suggest the resident is sensual or passionate, Baochai is particularly unemotional.</p>
+            <br><h3>Marriage as Corruption</h3><br>
+            <p>Baoyu always imagines Lin Daiyu as his future wife and lover, and Daiyu reciprocates those wishes. Their love for each other is unimaginably powerful. 
+              However, it is clear that Daiyu is not an ideal wife for Baoyu according to his family, because she does not have the social knowledge nor strength to manage the sprawling household as an outsider. 
+              Her sickly constitution, harshness, and frequent mood swings also make her unfavorable marriage-wise. Baochai, on the other hand, is theoretically Baoyu’s realistic perfect match. 
+              His family hopes that she can handle his high emotions and tone down his boyishness. A combination of Daiyu and Baochai would form Baoyu’s perfect wife, because she could satisfy his need for passion as well as the outside need for poise.</p>
+            <br><p>In any case, marriage is constantly associated with corruption in the novel; as soon as a girl marries, her purity, youth, and beauty fade and she is consumed by the world. </p>
+            <div class="captioned" style="float:right; width:50%; padding-left:20px; padding-bottom:10px;">
+              <img src="img/allspice_1.jpeg" class="fullsize"/>
+              <p>A photo of a gallery with detailed balustrades in a park in Beijing.</p>
+            </div>
+            <p>Baoyu is especially fretful when his cousins get married, because they move out and rarely see him afterwards. He even equates marriage with death several times. As his older cousins are married off and leave him one by one, 
+              he starts to realize that his pure world is being corrupted and the world with no passion is taking over. Marrying Daiyu is the only way Baoyu could endure marriage and maintain his purity. 
+              Sadly, Baoyu’s family tricks him into marrying Baochai when he thinks he is marrying Daiyu. His loveless marriage starts to corrupt him as well; his happiness dies.</p>
             <br><div class="captioned">
               <iframe class="fullsize vid" width="560" height="315" src="https://www.youtube.com/embed/zKqrDtuzuLE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              <p></p>
+              <p>Irene Roberts plays Baochai in San Francisco Opera’s production of Dream of the Red Chamber. In this aria, she sings: “A woman's only chance for happiness is to marry well.”</p>
             </div>
           </div>
         </div>
@@ -260,7 +292,7 @@
 
     <div id="about" class="text_section">
       <h3>About</h3><br>
-      <div class="captioned" style="float:right; width:40%; padding-left:20px;">
+      <div class="captioned" style="float:right; width:40%; padding-left:20px; margin-top:0px;">
         <img src="img/about_1.png" class="portrait"/>
         <p>Imagined plans for the layout of 大观园 (Prospect Garden) and Rongguo Mansion (artist unknown).</p>
       </div>
@@ -314,22 +346,27 @@
 
     /* when map icon is clicked, display info modal */
     $('img.map_icon').click(function(event) {
+      /* get modal name from clicked icon */
       var identifier = event.target.id
       prefix = identifier.substring(0, identifier.length-5);
       
+      /* make sure only one modal is open at a time */
       $('.info_modal').each(function(i, modal) {
         modal.style.display = "none";
       });
 
+      /* display modal */
       var this_modal = document.getElementById(prefix.concat("_modal"));
       this_modal.style.display = "block";
     });
 
-    /* when exit button is clicked, close info modal */
+    /* when exit button is clicked, hide info modal */
     $('img.exit').click(function(event) {
+      /* get modal name from clicked icon */
       var identifier = event.target.id
       prefix = identifier.substring(0, identifier.length-5);
       
+      /* hide modal */
       var this_modal = document.getElementById(prefix.concat("_modal"));
       this_modal.style.display = "none";
     });
