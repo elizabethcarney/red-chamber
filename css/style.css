@@ -12,6 +12,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 
 body {
     width: 100vw;
+    background-color: #f8f0e4;
 }
 
 p, li {
@@ -36,6 +37,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 #main {
     width: 100%;
+    max-width: 1700px;
     background-color: #f8f0e4;
 }
 
@@ -155,7 +157,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .modal_header {
     max-width: 800px;
-    max-height: 200px;
+    max-height: 120px;
     height: 25%;
     position: relative;
 }
