@@ -123,12 +123,15 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .map_icon {
     position: absolute;
-    width: 15%;
+    width: 20%;
     z-index: 2;
 }
 .map_icon:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+.bigger_map_icon {
+    width: 23%;
 }
 
 .info_modal {
@@ -233,34 +236,34 @@ a, h1, h2, h3, h4, h5, h6 {
  */
 
 #gate_icon {
-    top: 70%;
-    left: 55%;
+    top: 62%;
+    left: 54%;
 }
 #drenched_icon {
-    top: 67%;
-    left: 15%;
+    top: 57%;
+    left: 12%;
 }
 #naiad_icon {
-    top: 40%;
-    left: 40%;
+    top: 35%;
+    left: 34%;
 }
 #sweetrice_icon {
-    top: 30%;
-    left: 5%;
+    top: 20%;
+    left: 0%;
 }
 #allspice_icon {
-    top: 5%;
-    left: 30%;
+    top: 0%;
+    left: 25%;
 }
 #prospect_icon {
-    top: 10%;
-    left: 58%;
+    top: 5%;
+    left: 55%;
 }
 #delights_icon {
-    top: 55%;
-    left: 75%;
+    top: 42%;
+    left: 72%;
 }
 #death_icon {
-    top: 3%;
-    left: 82%;
+    top: 0%;
+    left: 80%;
 }
