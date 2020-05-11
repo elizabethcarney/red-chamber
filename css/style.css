@@ -37,8 +37,6 @@ a, h1, h2, h3, h4, h5, h6 {
 
 #main {
     width: 100%;
-    max-width: 1700px;
-    margin: 0 auto;
     background-color: #f8f0e4;
 }
 
@@ -97,6 +95,11 @@ a, h1, h2, h3, h4, h5, h6 {
     position: absolute;
     bottom: 0px;
     left: 0px;
+}
+
+.underintro {
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .map {
