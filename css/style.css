@@ -156,7 +156,7 @@ a, h1, h2, h3, h4, h5, h6 {
 .modal_header {
     max-width: 800px;
     max-height: 400px;
-    width: 70%;
+    height: 25%;
     position: relative;
 }
 
@@ -227,9 +227,9 @@ a, h1, h2, h3, h4, h5, h6 {
     color: darkred;
 }
 .about_pic {
-    max-width: 500px;
+    max-width: 420px;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 /*
