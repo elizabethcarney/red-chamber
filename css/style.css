@@ -226,7 +226,7 @@ a, h1, h2, h3, h4, h5, h6 {
 .text_section h3 {
     color: darkred;
 }
-.text_section img {
+.text_section div.captioned {
     max-width: 400px;
     height: auto;
 }
