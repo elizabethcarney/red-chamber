@@ -227,7 +227,7 @@ a, h1, h2, h3, h4, h5, h6 {
     color: darkred;
 }
 .text_section img {
-    max-width: 200px;
+    max-width: 400px;
     height: auto;
 }
 
