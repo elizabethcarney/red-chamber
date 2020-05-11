@@ -191,6 +191,22 @@ a, h1, h2, h3, h4, h5, h6 {
     border: 1px solid black;
 }
 
+.quotation {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Caudex', serif;
+    font-size: 1.2em;
+}
+.quote_text {
+    padding: 20px;
+    border: 1px solid darkred;
+    margin-bottom: 10px;
+}
+.quotation p {
+    font-size: .7em;
+}
+
 .exit {
     position: absolute;
     float: right;
