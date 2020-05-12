@@ -104,7 +104,7 @@ a, h1, h2, h3, h4, h5, h6 {
 
 .map {
     min-width: 500px;
-    max-width: 1720px;
+    max-width: 1400px;
     width: calc(100vw - 200px);
     min-height: 300px;
     max-height: 980px;
